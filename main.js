@@ -26,8 +26,6 @@ function changeDivs() {
   grid.forEach((item) => {
     item.addEventListener('mouseover', (e) => changeColor(e))
   })
-
-
 }
 
 changeDivs()
