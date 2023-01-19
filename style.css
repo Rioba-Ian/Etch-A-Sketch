@@ -18,9 +18,16 @@ a:hover {
 }
 
 body {
+  height: 100%;
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer"
+  ;
 }
 
 h1 {
@@ -28,6 +35,21 @@ h1 {
   line-height: 1.1;
 }
 
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
 
 .container {
   width: min(90%, 1200px);
@@ -36,19 +58,18 @@ h1 {
 
 #container {
   border: 4px solid rgb(72, 71, 71);
-  padding: 0em;
   margin: 0 auto;
   max-width: 960px;
-  margin-top: 12vmin;
-
-  /* width: 16rem;
-  height: 16rem; */
+  margin-top: 5vmin;
 
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .grid {
   border: .05px solid hsl(60, 1%, 39%);
+}
+
+footer {
+  text-align: center;
 }
