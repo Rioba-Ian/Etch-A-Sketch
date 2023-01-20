@@ -2,15 +2,15 @@ const container = document.getElementById("container")
 
 const GRID_SIZES = 32
 
-container.style.height = `${GRID_SIZES}rem`
-container.style.width = `${GRID_SIZES}rem`
+container.style.height = `560px`
+container.style.width = `560px`
 
 
-for (let i = 0; i <= (GRID_SIZES * 16 + 32 * 8 + 15); i++) {
+for (let i = 0; i < 64 * 64; i++) {
   const div = document.createElement("div")
 
-  div.style.width = "16px"
-  div.style.height = "16px"
+  div.style.width = "6.5133px"
+  div.style.height = "6.5133px"
 
   div.classList.add("grid")
   container.appendChild(div)
@@ -28,4 +28,4 @@ function changeDivs() {
   })
 }
 
-changeDivs()
+// changeDivs()
