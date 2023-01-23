@@ -6,22 +6,34 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&family=Rock+Salt&family=Rubik+Moonrocks&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
 
-    <header class="container"></header>
+    <header class="">
+      <div class="header container">
 
-    <aside class="container"></aside>
+        <h1>Etch a Sketch - Draw something inside the grids</h1>
+      </div>
+    </header>
 
-    <main class="container">
+    <main class="container main">
+      <aside class="aside">
+        <button value="16">16 X 16</button>
+        <button value="32">32 X 32</button>
+        <button value="64">64 X 64</button>
+      </aside>
       <div id="container"></div>
-
-      <button></button>
     </main>
 
-    <footer class="container"></footer>
+    <footer class="container">
+      <p>Created by <a href="https://github.com/Rioba-Ian" target="_blank">Ian Rioba</a>.</p>
+    </footer>
 
 
     <script type="module" src="/main.js"></script>
