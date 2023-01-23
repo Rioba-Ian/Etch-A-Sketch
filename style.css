@@ -18,9 +18,13 @@ a:hover {
 }
 
 button {
+  font-family: 'Rubik Moonrocks', cursive;
   padding: 0.8em 1.6em;
+  font-size: clamp(1rem, 1rem + 2vw, 1.5rem);
   border-radius: 16px;
   border: none;
+
+  cursor: pointer;
 }
 
 body {
@@ -28,7 +32,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 2rem 1fr;
-  grid-template-rows: 1fr 4fr 1fr;
+  grid-template-rows: 10% 4fr 1fr;
   grid-template-areas:
     "header header"
     "main main"
@@ -38,6 +42,7 @@ body {
 }
 
 h1 {
+  font-family: 'Rubik Moonrocks', cursive;
   font-size: clamp(2rem, 2rem + 2vw, 2.5rem);
   line-height: 1.1;
 }
