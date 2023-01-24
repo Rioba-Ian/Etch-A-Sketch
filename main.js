@@ -8,6 +8,16 @@ const GRID_COLLECTION = {
 
 const GRID_SIZES = 32
 
+const asideBtns = document.querySelectorAll("aside>button")
+
+asideBtns.forEach((btn) => {
+  btn.addEventListener('click', getGridSize)
+})
+
+function getGridSize(e) {
+  console.log(typeof e.target.value);
+}
+
 container.style.height = `560px`
 container.style.width = `560px`
 
@@ -21,6 +31,43 @@ for (let i = 0; i < 64 * 64; i++) {
   div.classList.add("grid")
   container.appendChild(div)
 }
+
+let isMouseDown;
+document.addEventListener
+
+function changeDivs() {
+  const grid = document.body.querySelectorAll(".grid")
+
+  const parentContainer = document.querySelector(".container")
+
+  let isMouseDown;
+  parentContainer.addEventListener('mousedown', () => isMouseDown = true)
+  parentContainer.addEventListener('mouseup', () => isMouseDown = false)
+
+
+  function changeColor(event) {
+    if (event.buttons == 0) {
+      window.removeEventListener("mousemove", changeColor)
+    } else {
+      event.target.style.backgroundColor = "black"
+      event.preventDefault()
+    }
+  }
+
+
+  grid.forEach((item) => {
+    if (!isMouseDown) {
+      item.addEventListener("mouseover", changeColor)
+    }
+  })
+}
+
+changeDivs()
+
+
+
+
+
 
 // const GRID_SIZES = 32
 
@@ -37,17 +84,3 @@ for (let i = 0; i < 64 * 64; i++) {
 //   div.classList.add("grid")
 //   container.appendChild(div)
 // }
-
-function changeDivs() {
-  const grid = document.body.querySelectorAll(".grid")
-
-  function changeColor(event) {
-    event.target.style.backgroundColor = "black"
-  }
-
-  grid.forEach((item) => {
-    item.addEventListener('mouseover', (e) => changeColor(e))
-  })
-}
-
-// changeDivs()
