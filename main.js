@@ -1,9 +1,9 @@
 const container = document.getElementById("container")
 
 const GRID_COLLECTION = {
-  grid16: { size: 16, square: 2.06 },
-  grid32: { size: 32, square: 0.968 },
-  grid64: { size: 64, square: 0.422 }
+  grid16: { size: 16, square: 32.766666 },
+  grid32: { size: 32, square: 15.266 },
+  grid64: { size: 64, square: 6.5133 }
 }
 
 const GRID_SIZES = 32
@@ -18,15 +18,15 @@ function getGridSize(e) {
   console.log(typeof e.target.value);
 }
 
-container.style.height = `35rem`
-container.style.width = `35rem`
+container.style.height = `560px`
+container.style.width = `560px`
 
 
 for (let i = 0; i < 16 * 16; i++) {
   const div = document.createElement("div")
 
-  div.style.width = "2.06rem"
-  div.style.height = "2.06rem"
+  div.style.width = "32.667px"
+  div.style.height = "32.667px"
 
   div.classList.add("grid")
   container.appendChild(div)
