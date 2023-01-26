@@ -1,19 +1,26 @@
+// get the container and set it to fixed size.
 const container = document.getElementById("container")
 
 container.style.height = `560px`
 container.style.width = `560px`
 
+
+// the grids and the sizes.
 const GRID_COLLECTION = {
   grid16: { size: 16, square: 32.766666 },
   grid32: { size: 32, square: 15.266 },
   grid64: { size: 64, square: 6.5133 }
 }
 
+
+// handle state for container when mouse is down
 let isMouseDown;
 container.addEventListener('mousedown', () => isMouseDown = true)
 container.addEventListener('mouseup', () => isMouseDown = false)
 
 
+
+// function to handle the changing of colors of divs
 function changeDivs() {
   const grid = document.body.querySelectorAll(".grid")
   function changeColor(event) {
@@ -31,6 +38,7 @@ function changeDivs() {
       item.addEventListener("mouseover", changeColor)
     }
   })
+
 }
 
 
@@ -102,19 +110,3 @@ function getGridSize(e) {
   return [sizes, squareSize]
 }
 
-
-// const GRID_SIZES = 32
-
-// container.style.height = `${GRID_SIZES}rem`
-// container.style.width = `${GRID_SIZES}rem`
-
-
-// for (let i = 0; i <= (GRID_SIZES * 16 + 32 * 8 + 15); i++) {
-//   const div = document.createElement("div")
-
-//   div.style.width = "16px"
-//   div.style.height = "16px"
-
-//   div.classList.add("grid")
-//   container.appendChild(div)
-// }
