@@ -11,6 +11,8 @@ const GRID_COLLECTION = {
   grid32: { size: 32, square: 15.266 },
   grid64: { size: 64, square: 6.5133 }
 }
+// handle the color chosen by user.
+let colorshade = '#000';
 
 
 // handle state for container when mouse is down
@@ -18,7 +20,15 @@ let isMouseDown;
 container.addEventListener('mousedown', () => isMouseDown = true)
 container.addEventListener('mouseup', () => isMouseDown = false)
 
+function getColorInput() {
+  const colorPicker = document.querySelector("#color-picker")
 
+  colorPicker.addEventListener('change', (e) => colorshade = e.target.value)
+
+  console.log(colorshade);
+}
+
+getColorInput()
 
 // function to handle the changing of colors of divs
 function changeDivs() {
@@ -27,7 +37,8 @@ function changeDivs() {
     if (event.buttons == 0) {
       window.removeEventListener("mousemove", changeColor)
     } else {
-      event.target.style.backgroundColor = "black"
+      event.target.style.backgroundColor = colorshade
+
       event.preventDefault()
     }
   }

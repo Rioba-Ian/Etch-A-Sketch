@@ -23,11 +23,19 @@
     </header>
 
     <main class="container main">
-      <aside class="aside">
-        <button value="16">16 X 16</button>
-        <button value="32">32 X 32</button>
-        <button value="64">64 X 64</button>
-      </aside>
+      <div class="controls">
+
+        <aside class="aside">
+          <button value="16">16 X 16</button>
+          <button value="32">32 X 32</button>
+          <button value="64">64 X 64</button>
+        </aside>
+        <section>
+          <label for="color-picker">Pick a color</label>
+          <input type="color" name="color-picker" id="color-picker">
+        </section>
+      </div>
+
       <div id="container"></div>
     </main>
 
