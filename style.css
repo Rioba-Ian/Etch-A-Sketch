@@ -115,3 +115,13 @@ footer {
 footer {
   text-align: center;
 }
+
+.clear {
+  display: flex;
+  align-items: center;
+}
+
+.eraser {
+  width: 3rem;
+  cursor: cell;
+}

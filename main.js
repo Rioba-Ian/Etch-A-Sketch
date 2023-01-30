@@ -15,6 +15,9 @@ const GRID_COLLECTION = {
 let colorshade = '#000';
 
 
+
+
+
 // handle state for container when mouse is down
 let isMouseDown;
 container.addEventListener('mousedown', () => isMouseDown = true)
@@ -29,6 +32,20 @@ function getColorInput() {
 }
 
 getColorInput()
+
+function clearColorInput() {
+  const eraser = document.querySelector(".eraser")
+
+  let eraserDown;
+
+
+
+  eraser.addEventListener("click", () => {
+    eraserDown = false
+  })
+}
+
+clearColorInput()
 
 // function to handle the changing of colors of divs
 function changeDivs() {
