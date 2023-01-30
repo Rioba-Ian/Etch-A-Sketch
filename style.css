@@ -116,12 +116,21 @@ footer {
   text-align: center;
 }
 
-.clear {
-  display: flex;
-  align-items: center;
+input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.eraser {
+input[type=radio]+img {
+  cursor: default;
+}
+
+/* .radio-eraser:checked~img {
+  outline: 3px solid coral;
+} */
+
+.eraser-img {
   width: 3rem;
-  cursor: cell;
 }

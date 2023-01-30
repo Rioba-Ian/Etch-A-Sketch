@@ -34,15 +34,15 @@ function getColorInput() {
 getColorInput()
 
 function clearColorInput() {
-  const eraser = document.querySelector(".eraser")
+  const eraser = document.querySelector("#eraser")
 
-  let eraserDown;
+  const eraserImg = document.querySelector(".eraser-img")
 
-
-
-  eraser.addEventListener("click", () => {
-    eraserDown = false
+  eraserImg.addEventListener("click", () => {
+    eraser.toggleAttribute("checked")
+    eraserImg.setAttribute("outline", "4px solid coral")
   })
+
 }
 
 clearColorInput()
