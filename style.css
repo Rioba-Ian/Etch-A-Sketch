@@ -131,9 +131,6 @@ input[type=checkbox]+img {
   cursor: default;
 }
 
-[type=checked]:checked~img {
-  outline: 3px solid coral;
-}
 
 .eraser-img {
   width: 3rem;
