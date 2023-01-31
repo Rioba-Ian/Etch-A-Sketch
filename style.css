@@ -127,6 +127,13 @@ input[type=checkbox] {
   outline: 5px solid salmon;
 }
 
+
+
+.clear>label {
+  display: flex;
+  align-items: center;
+}
+
 input[type=checkbox]+img {
   cursor: default;
 }
