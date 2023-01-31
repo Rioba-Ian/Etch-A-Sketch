@@ -35,13 +35,21 @@ getColorInput()
 
 function clearColorInput() {
   const eraser = document.querySelector("#eraser")
-
   const eraserImg = document.querySelector(".eraser-img")
+  const grandParent = eraser.parentNode.parentElement
 
   eraserImg.addEventListener("click", () => {
     eraser.toggleAttribute("checked")
-    eraserImg.setAttribute("outline", "4px solid coral")
+    grandParent.classList.toggle("rubber-on")
+
+    if (grandParent.classList.contains("rubber-on")) {
+      colorshade = "#fff"
+    } else {
+      colorshade = "#000"
+    }
   })
+
+
 
 }
 

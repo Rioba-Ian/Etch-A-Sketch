@@ -116,20 +116,24 @@ footer {
   text-align: center;
 }
 
-input[type=radio] {
+input[type=checkbox] {
   position: absolute;
-  opacity: 0;
+  opacity: 1;
   width: 0;
-  height: 0;
+  height: 0rem;
 }
 
-input[type=radio]+img {
+.rubber-on {
+  outline: 5px solid salmon;
+}
+
+input[type=checkbox]+img {
   cursor: default;
 }
 
-/* .radio-eraser:checked~img {
+[type=checked]:checked~img {
   outline: 3px solid coral;
-} */
+}
 
 .eraser-img {
   width: 3rem;
