@@ -43,6 +43,11 @@ body {
 
 }
 
+a {
+  color: #080d6a;
+  font-weight: bold;
+}
+
 h1 {
   font-family: 'Rubik Moonrocks', cursive;
   font-size: clamp(2rem, 2rem + 2vw, 2.5rem);
@@ -162,4 +167,8 @@ input[type="color"] {
 
 
 
+}
+
+footer {
+  font-family: 'Rock Salt', serif;
 }
