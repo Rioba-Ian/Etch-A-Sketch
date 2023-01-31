@@ -19,10 +19,12 @@ a:hover {
 
 button {
   font-family: 'Rubik Moonrocks', cursive;
-  padding: 0.8em 1.6em;
+  padding: 0.5em 1em;
+  background-color: rgb(23, 67, 147);
   font-size: clamp(1rem, 1rem + 2vw, 1.5rem);
   border-radius: 16px;
   border: none;
+  color: #fff;
 
   cursor: pointer;
 }
@@ -49,7 +51,8 @@ h1 {
 
 header {
   grid-area: header;
-  background-color: coral;
+  background-color: cornflowerblue;
+  align-self: center;
 
   text-align: center;
 }
@@ -63,7 +66,7 @@ main {
   grid-template-areas:
     "sidebar content";
   align-items: center;
-  justify-items: center;
+
 }
 
 .main {
@@ -72,10 +75,11 @@ main {
 
 .controls {
   grid-area: sidebar;
+
 }
 
 aside {
-  background-color: #535bf2;
+  background-color: mediumseagreen;
   padding: 2em 1em;
 
   display: flex;
@@ -124,7 +128,7 @@ input[type=checkbox] {
 }
 
 .rubber-on {
-  outline: 5px solid salmon;
+  outline: 8px solid salmon;
 }
 
 
@@ -141,4 +145,21 @@ input[type=checkbox]+img {
 
 .eraser-img {
   width: 3rem;
+}
+
+.color-picker,
+.clear {
+  margin-top: 1em;
+  font-family: 'Rock Salt', serif;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+
+  width: 3rem;
+  height: 2rem;
+
+
+
 }
